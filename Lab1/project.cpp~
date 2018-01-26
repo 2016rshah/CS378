@@ -1,0 +1,29 @@
+#include <pthread.h>
+#include <iostream>
+#include <sstream>
+
+int err; // needs to be global. If it wasn't global, a child thread would return a local variable on the child's address space, which is not availible in the parent's address space
+
+uint64_t globalCount;
+
+int[] workerCounts;
+
+uint
+
+int main(int argc, char** argv)
+{
+  uint64_t maxcounter;
+  uint64_t workers;
+  
+  if(argc > 2){
+    std::istringstream(argv[1]) >> maxcounter;
+    std::istringstream(argv[2]) >> workers;
+  }
+  std::cout << maxcounter << std::endl
+	    << workers << std::endl;
+
+  for(uint64_t i = 0; i < workers; i++){
+    
+  }
+  return 0; 
+}
